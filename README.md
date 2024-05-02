@@ -13,7 +13,7 @@ Twitter data is collected by creating a Twitter application, installing and star
 Apache Hive is utilized to process the data in batch mode. The process involves extracting tweet IDs and text, splitting text into words, joining with a sentiment dictionary, and calculating the average sentiment rating for each tweet.
 ## Performing Sentiment Analysis using MapReduce: 
 MapReduce is employed for distributed sentiment analysis. The process involves implementing distributed caching for the sentiment dictionary, writing mapper and reducer classes, and executing the MapReduce program.
-Procedure :
+## Procedure :
 The tweet is in the nested JSON format. From this tweet, we will extract the id, which is the tweet_id and text, which is the tweet_text.
 Next, we will split the text into words using the split() UDF available in Hive. If we use the split() function to split the text as words, it will return an array of values. So, we will create another Hive table and store the tweet_id and the array of words.
 Next, let’s split each word inside the array as a new row. For this, we need to use a UDTF(User Defined Table Generating Function). We have built-in UDTF called explode which will extract each element from an array and create a new row for each element.
@@ -26,3 +26,13 @@ we will calculat the average rating of each tweet by using each word of the twee
 2)Writing a mapper class to calculate the sentiments
 3)Writing a reducer class to display all the mapper output
 4)Writing a Driver class for our MapReduce program
+
+
+After this we need to make an executable jar file for the further process.
+On top of this, we need to provide the input(tweets_folder) path and the output folder path as arguments.
+
+## How To Run :
+
+In order to run this program, we need to build a jar file of the above java files.
+hadoop jar twitter.jar /Hadoop/twitter_data/ /Hadoop/output/
+
