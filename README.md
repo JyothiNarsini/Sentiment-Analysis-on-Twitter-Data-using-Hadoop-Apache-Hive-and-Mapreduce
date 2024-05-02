@@ -1,5 +1,5 @@
-## Sentiment-Analysis-on-Twitter-Data-using-Hadoop-Apache-Hive-and-Mapreduce
-# Overview:
+# Sentiment-Analysis-on-Twitter-Data-using-Hadoop-Apache-Hive-and-Mapreduce
+## Overview:
 This project aims to perform sentiment analysis on Twitter data using Apache Hive and MapReduce. Sentiment analysis involves determining the sentiment or opinion expressed in a piece of text, in this case, tweets from Twitter. By leveraging Apache Hive and MapReduce, large volumes of Twitter data can be efficiently processed and analyzed to extract insights about the sentiment of the tweets.
 # Requirements
 1)Apache Hive
